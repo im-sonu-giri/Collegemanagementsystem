@@ -5,7 +5,7 @@ module.exports = function(req, res, next) {
         return res.status(401).send("Token Missing");
     const token = authHeader.split(' ')[1];
     if (!token) {
-        return res.status(401).send("token Missing")
+        return res.status(401).send("token Missing");
     }
     try{
         const decoded = jwt.verify(token, process.env.JWT_SECRET)
