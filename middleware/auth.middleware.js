@@ -9,9 +9,6 @@ module.exports = async function(req,res,next) {
         next()
     }
     catch(err) {
-        res.status(401).send("Unauthorized")
-    }
-    
-
-    
-}
+        res.status(401).send("Unauthorized");
+    }  
+};
