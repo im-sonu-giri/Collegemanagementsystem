@@ -11,3 +11,4 @@ const sequelize = new sequelize(
 const user = require("./user.model")(sequelize, DataTypes)
 const student = require("./student.model")(sequelize, DataTypes)
 
+return{sequelize, user, student}
