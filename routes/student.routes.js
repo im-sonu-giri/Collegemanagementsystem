@@ -27,3 +27,4 @@ router.delete('/:id', authMiddleware, async (req,res) =>{
     await student.destroy();
     res.send('Deleted');
 });
+module.exports = router;
