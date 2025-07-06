@@ -23,4 +23,5 @@ router.put('/:id', authMiddleware, async (req, res) =>{
 
 router.delete('/:id', authMiddleware, async (req,res) =>{
     const student = await Student.findByPk(req.params.id);
+    if (!student) return res.status(404).send('student not found');
 })
