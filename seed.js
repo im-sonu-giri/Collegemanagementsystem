@@ -4,9 +4,10 @@ async function seed() {
     try {
         await sequelize.sync({ force: true});
         console.log('tables synced');
+        const hashedPassword = await bcrypt.hash('admin123',10)
         await User.create({
             username: 'admin',
-            password: 'admin123',
+            password: hashedPassword,
         });
         console.log('default user created');
         process.exit();
