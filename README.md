@@ -39,5 +39,18 @@ college-management-api/
 └── README.md
 
 #API Endpoints
+Authorization header:
+    Authorization: Bearer <your_token>
+
+Authentication:
+    POST /api/login
+
+Student Endpoints:
+    - GET /api/students         //Get all student
+    - POST /api/students        //create new student
+    - PUT /api/students/:id      //update student by ID
+    - DELETE /api/students/:id   //Delete student by ID
 
 
+# Author 
+    Sonu Giri
