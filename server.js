@@ -7,14 +7,14 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-const{ sequelize } = require('./models');
+const{ sequelize, User, Student } = require('./models');
 const authRoutes = require("./routes/auth.routes");
 const studentRoutes = require('./routes/student.routes');
 
 app.use('/api', authRoutes);
 app.use('/api/students', studentRoutes);
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 'localhost';
 sequelize.sync().then(() => {
-    app.listen(PORT, () => console.log('server runnign on port ${PORT}'));
+    app.listen(PORT, () => console.log(`server runnign on port ${PORT}`));
 });

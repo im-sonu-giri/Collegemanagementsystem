@@ -1,5 +1,5 @@
-const { sequelize , DataTypes } = require('sequelize')
-const sequelize = new sequelize(
+const { Sequelize , DataTypes } = require('sequelize')
+const sequelize = new Sequelize(
     process.env.DB_USER,
     process.env.DB_NAME,
     process.env.DB_PASSWORD, {
@@ -11,4 +11,4 @@ const sequelize = new sequelize(
 const User = require("./user.model")(sequelize, DataTypes)
 const Student = require("./student.model")(sequelize, DataTypes)
 
-module.exports = {sequelize, User, Student}
+module.exports = {sequelize, User, Student};
