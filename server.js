@@ -15,6 +15,9 @@ app.use('/api', authRoutes);
 app.use('/api/students', studentRoutes);
 
 const PORT = process.env.PORT || 3000;
-sequelize.sync().then(() => {
+sequelize.sync( { force: true}).then(() => {
+    console.log('database synced');
     app.listen(PORT, () => console.log(`server runnign on port ${PORT}`));
-});
+}).catch((err) => {
+    console.error('databae sync failed:',err);
+})
