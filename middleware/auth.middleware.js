@@ -3,7 +3,10 @@ module.exports = async function(req,res,next) {
     const token = req.header['authorization']
     if (!token)
         return res.status(403).send("Token Missing");
-
+    try{
+        const decoded = jwt.verify(token, process.env.JWT_SECRET)
+        
+    }
     
 
     
