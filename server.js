@@ -14,7 +14,7 @@ const studentRoutes = require('./routes/student.routes');
 app.use('/api', authRoutes);
 app.use('/api/students', studentRoutes);
 
-const PORT = process.env.PORT || 'localhost';
+const PORT = process.env.PORT || 3000;
 sequelize.sync().then(() => {
     app.listen(PORT, () => console.log(`server runnign on port ${PORT}`));
 });
