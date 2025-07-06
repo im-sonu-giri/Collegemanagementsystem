@@ -1,4 +1,4 @@
-module.exports =(sequelize ,DataType) => {
+module.exports =(sequelize, DataTypes) => {
     return sequelize.define('User', {
         username:{
             type: DataTypes.STRING,
@@ -10,5 +10,4 @@ module.exports =(sequelize ,DataType) => {
             allowNull: false,
         }
     });
-    return User;
 };
