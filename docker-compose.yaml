@@ -7,3 +7,12 @@ services:
       - .env
     depends_on:
       - db
+
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: college
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
