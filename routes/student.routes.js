@@ -4,14 +4,14 @@ const { Student } = require('../models');
 const authMiddleware = require('../middleware/auth.middleware');
 
 router.get('/', authMiddleware, async (req, res) =>{
-    const students = await Student.findAll();
+    const students = await Student.create(req.body);
     res.json(students);
 
 });
 
 router.post('/', authMiddleware, async (req, res) => {
     const student = await Student.create(req.body);
-    req.json(student);
+    res.json(student);
 });
 
 router.put('/:id', authMiddleware, async (req, res) =>{
