@@ -6,4 +6,9 @@ require('dotenv').config();
 
 router.post('/login', async(req, res) => {
     const{ username, password } = req.body;
+    if user = await User.findOne({where: {username }});
+    if(!user || user.password != password){
+        return res.status(401).json({message: 'Invalid Credentials'});
+    }
+    
 }) 
