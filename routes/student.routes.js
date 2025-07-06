@@ -20,3 +20,7 @@ router.put('/:id', authMiddleware, async (req, res) =>{
     await student.update(req.body);
     res.json(student);
 });
+
+router.delete('/:id', authMiddleware, async (req,res) =>{
+    const student = await Student.findByPk(req.params.id);
+})
