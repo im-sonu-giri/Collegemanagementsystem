@@ -13,3 +13,10 @@ router.post('/', authMiddleware, async (req, res) => {
     const student = await Student.create(req.body);
     req.json(student);
 });
+
+router.put('/:id', authMiddleware, async (req, res) =>{
+    const student = await Student.findByPk(req.params.id);
+    if (!student) return res.status(404).send("Student not found");
+    await student.update(req.body);
+    res.json(student);
+});
