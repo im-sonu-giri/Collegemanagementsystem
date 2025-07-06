@@ -7,3 +7,7 @@ const sequelize = new sequelize(
         dialect: 'postgres'
     }
     )
+
+const user = require("./user.model")(sequelize, DataTypes)
+const student = require("./student.model")(sequelize, DataTypes)
+
