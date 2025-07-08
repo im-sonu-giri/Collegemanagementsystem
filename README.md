@@ -1,6 +1,6 @@
 # College Management System
 
-A simple RESTful API for managing students in a college system, built using Node.js, Express, ostgreSQL, and Sequelize, with JWT-based authentication and full Docker support.
+A simple RESTful API for managing students in a college system, built using Node.js, Express, postgreSQL, and Sequelize, with JWT-based authentication and full Docker support.
 
 # Features 
  - User login with JWT authentication
