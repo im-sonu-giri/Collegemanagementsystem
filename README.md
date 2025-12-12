@@ -17,39 +17,6 @@ A simple RESTful API for managing students in a college system, built using Node
 - JSON Web Tokens (JWT)
 - Docker & Docker Compose
 
-# Project Structure
-
-college-management-api/
-├── models/
-│   ├── index.js
-│   ├── user.model.js
-│   └── student.model.js
-├── routes/
-│   ├── auth.routes.js
-│   └── student.routes.js
-├── middleware/
-│   └── auth.middleware.js
-├── .env
-├── .gitignore
-├── Dockerfile
-├── docker-compose.yml
-├── package.json
-├── seed.js
-├── server.js
-└── README.md
-
-#API Endpoints
-Authorization header:
-    Authorization: Bearer <your_token>
-
-Authentication:
-    POST /api/login
-
-Student Endpoints:
-    - GET /api/students         //Get all student
-    - POST /api/students        //create new student
-    - PUT /api/students/:id      //update student by ID
-    - DELETE /api/students/:id   //Delete student by ID
 
 
 # Author 
