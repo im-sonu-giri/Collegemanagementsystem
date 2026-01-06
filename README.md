@@ -20,4 +20,4 @@ A simple RESTful API for managing students in a college system, built using Node
 
 
 # Author 
-    Sonu Giri
+    @Sonu Giri
